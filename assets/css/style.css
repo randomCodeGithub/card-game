@@ -1,0 +1,100 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+body {
+  display: grid;
+  grid-template-columns: repeat(2, 4rem);
+  grid-template-rows: 7rem 2rem 7rem;
+  gap: 0.5rem;
+  cursor: pointer;
+  justify-content: center;
+  padding-top: 1rem;
+}
+
+.deck {
+  font-size: 3rem;
+}
+
+.deck,
+.card {
+  height: 100%;
+  width: 100%;
+  border: 1px solid #000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+}
+
+.player-card-slot {
+  position: relative;
+}
+
+.card {
+  font-size: 1.5rem;
+  font-weight: 500;
+  text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000,
+    1px 1px 0 #000;
+}
+
+.card.fire {
+  background-color: red;
+}
+
+.card.water {
+  background-color: blue;
+}
+
+.card.wind {
+  background-color: lightgreen;
+}
+
+.card.dark {
+  background-color: rgb(81, 28, 81);
+}
+
+.card.light {
+  background-color: rgb(230, 230, 46);
+}
+
+.card.earth {
+  background-color: rgb(71, 40, 40);
+}
+
+.enemy-deck {
+  background-color: red;
+}
+
+.player-deck {
+  background-color: blue;
+}
+
+.text {
+  grid-column: span 2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Abilities */
+
+.abilties-wrapper {
+  position: absolute;
+  top: 50%;
+  left: calc(100% + 50px);
+  transform: translateY(-50%);
+}
+
+.abilties-wrapper button {
+  width: 80px;
+}
+
+.abilties-wrapper button:not(:last-child) {
+  margin-bottom: 7px;
+}
+
+.abilties-wrapper button::first-letter {
+  text-transform: uppercase;
+}
