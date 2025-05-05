@@ -32,7 +32,7 @@ class Deck {
   resetDeck() {
     return ELEMENTS.flatMap((elements) => {
       return POWERS.map((powers) => {
-        return new Card(elements + ' ' + powers, elements, powers);
+        return new Card(elements + ' ' + powers, elements, powers, 0);
       });
     });
   }
